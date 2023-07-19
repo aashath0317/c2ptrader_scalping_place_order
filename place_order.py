@@ -35,13 +35,13 @@ client = telethon.TelegramClient(StringSession(string),api_id=3030128, api_hash=
 client.connect()
 API_KEY = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmOWI4ZGVlMzljMzVhNDY4ZmNmOGE1ZDlkYTAzNzFiZCIsInBlcm1pc3Npb25zIjpbXSwiYWNjZXNzUnVsZXMiOlt7ImlkIjoidHJhZGluZy1hY2NvdW50LW1hbmFnZW1lbnQtYXBpIiwibWV0aG9kcyI6WyJ0cmFkaW5nLWFjY291bnQtbWFuYWdlbWVudC1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZXN0LWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1ycGMtYXBpIiwibWV0aG9kcyI6WyJtZXRhYXBpLWFwaTp3czpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZWFsLXRpbWUtc3RyZWFtaW5nLWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6d3M6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX0seyJpZCI6Im1ldGFzdGF0cy1hcGkiLCJtZXRob2RzIjpbIm1ldGFzdGF0cy1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoicmlzay1tYW5hZ2VtZW50LWFwaSIsIm1ldGhvZHMiOlsicmlzay1tYW5hZ2VtZW50LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJjb3B5ZmFjdG9yeS1hcGkiLCJtZXRob2RzIjpbImNvcHlmYWN0b3J5LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJtdC1tYW5hZ2VyLWFwaSIsIm1ldGhvZHMiOlsibXQtbWFuYWdlci1hcGk6cmVzdDpkZWFsaW5nOio6KiIsIm10LW1hbmFnZXItYXBpOnJlc3Q6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX1dLCJ0b2tlbklkIjoiMjAyMTAyMTMiLCJpbXBlcnNvbmF0ZWQiOmZhbHNlLCJyZWFsVXNlcklkIjoiZjliOGRlZTM5YzM1YTQ2OGZjZjhhNWQ5ZGEwMzcxYmQiLCJpYXQiOjE2ODkzMzk5MjV9.NsgW8ziS-GvcqoSK1UEOiheJpun1PViBtrWAqqzWbrsEHfgsAdtnRkt0SwPnQCzdr4kyQSiN7JIBy8Ug1x4mX_aW4xAT9oX8PGRunwh2DLYjSsc8yuw1cOiCKUeg1suZVmEGUB9F1omkF0057_Mx2tgkzN-9a-rANohy5jplhmlcEyj4FjVs6924Tyf9CTGl-O-YJ8YT66163JlTngXhzYOqlxFKSPiPPnNT18aMWE6hq46_n4LAC-1Owm4Xm_yp_TH3q09ve_SAP01phIYgSy7YI_n3hJOfIR3MWXyghqMTjm7hWovYaq9w47mhkuqlZ5kmhYDSVtIw0ClW0gp02HDH5-HG0tQQuZZ9eVdcmD-IYRiyldV7SDVNQPGP4YLKjwkVB9bThATtOKzVjfwzgSbkLvp0NcmZ0U7rLacSTCXezJdy4gXOK41fA6b67re-nVxwnNuN7cLfjMHUNtWJtroc6nYDJJpIWxOYgiATDgumonbhCtJvOlkww88lHvEUYZwxhjUHGNmbcw116Jg9Litpiqt-MhwylqcrX0UHjfZhMhK-il-yZF-MdRcoU-pUFI_GiMbDUnn6KwkEOgHz0DJEHJpsV7eS89I6ZzN_XyAHG6PpfSBHK1QkXzhAWqWPyiamlgoB7QQF-yCkiRmQehZY8xvHhg8Dq5xuLVpNeS0"
 #ACCOUNT_ID = "2da5bee2-1da0-4ed4-b03b-13714acc8009" #main demo
-ACCOUNT_ID = "7c348b78-2c13-4340-9875-e1d241cb0323"  #Scalping Account
+ACCOUNT_ID = "3e917764-b12f-4834-8e81-5f445222d16b"  #another demo
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-channel_id = -1001981997793  #main
-#channel_id = -1001963686318  #trading test
+#channel_id = -1001981997793  #main
+channel_id = -1001963686318  #trading test
 igroup = -990951103
 
 
@@ -101,9 +101,7 @@ async def my_event_handler(event):
                     bid = float(current_price['bid'])
                     await client.send_message(-1001964100487, str(bid))
                     ID = str((ID['positionId']))
-                    await client.send_message(-1001967508097, ID)
-                    ID = str((ID['orderId']))
-                    await client.send_message(-1001987719345, ID)       
+                    await client.send_message(-1001951476501, ID) 
 
                 else:
                     msg = (ID['message'])
@@ -117,9 +115,8 @@ async def my_event_handler(event):
                 bid = float(current_price['bid'])
                 await client.send_message(-1001964100487, str(bid))
                 PID = str((ID['positionId']))
-                await client.send_message(-1001967508097, PID)               
-                ID = str((ID['orderId']))
-                await client.send_message(-1001987719345, ID)       
+                await client.send_message(-1001951476501, PID)               
+   
                     
 
         elif order == "SELL" and order_check == "NOW":
@@ -131,17 +128,13 @@ async def my_event_handler(event):
                     ask = float(current_price['ask'])
                     await client.send_message(-1001964100487, str(ask))
                     PID = str((ID['positionId']))
-                    await client.send_message(-1001967508097, PID)  
-                    OID = str((ID['orderId']))
-                    await client.send_message(-1001987719345, OID)                     
+                    await client.send_message(-1001951476501, PID)                     
                 else:
                     msg = (ID['message'])
                     await client.send_message(igroup, msg)
 
                 PID = str((ID['positionId']))
-                await client.send_message(-1001967508097, PID)
-                OID = str((ID['orderId']))
-                await client.send_message(-1001987719345, OID)                       
+                await client.send_message(-1001951476501, PID)              
 
             else:
                 ID=await connection.create_market_sell_order(pair, 0.01,float(sl),float(tp1))
@@ -150,17 +143,17 @@ async def my_event_handler(event):
                 ask = float(current_price['ask'])
                 await client.send_message(-1001964100487, str(ask))
                 PID = str((ID['positionId']))
-                await client.send_message(-1001967508097, PID)                
-                OID = str((ID['orderId']))
-                await client.send_message(-1001987719345, OID)        
+                await client.send_message(-1001951476501, PID)                 
         else:
             pass
              
     elif tstring[1] == 'Let’s close first entry and set BREAKEVEN last layer. Scalpers can close all now ✅':
-        async for message in client.iter_messages(-1001967508097):
+        async for message in client.iter_messages(-1001951476501):
             ID = str(message.text)
-            cancel = await connection.close_position(ID)
-            await client.send_message(igroup, str(cancel))  
+            async for message in client.iter_messages(-1001964100487):
+                sl = float(message.text)
+                await connection.modify_position(ID, sl)
+            
 
 
 
