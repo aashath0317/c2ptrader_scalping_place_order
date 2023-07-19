@@ -40,8 +40,8 @@ ACCOUNT_ID = "3e917764-b12f-4834-8e81-5f445222d16b"  #another demo
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-channel_id = -1001981997793  #main
-#channel_id = -1001963686318  #trading test
+#channel_id = -1001981997793  #main
+channel_id = -1001963686318  #trading test
 igroup = -990951103
 
 
