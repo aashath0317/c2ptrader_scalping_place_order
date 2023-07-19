@@ -1,1 +1,1 @@
-# c2ptrader_scalping
+# c2ptrading_bot
