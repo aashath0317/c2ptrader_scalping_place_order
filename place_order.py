@@ -101,7 +101,7 @@ async def my_event_handler(event):
                     bid = float(current_price['bid'])
                     await client.send_message(-1001964100487, str(bid))
                     ID = str((ID['positionId']))
-                    await client.send_message(-1001951476501, ID) 
+                    await client.send_message(-1001967508097, ID) 
 
                 else:
                     msg = (ID['message'])
@@ -115,7 +115,7 @@ async def my_event_handler(event):
                 bid = float(current_price['bid'])
                 await client.send_message(-1001964100487, str(bid))
                 PID = str((ID['positionId']))
-                await client.send_message(-1001951476501, PID)               
+                await client.send_message(-1001967508097, PID)               
    
                     
 
@@ -128,13 +128,13 @@ async def my_event_handler(event):
                     ask = float(current_price['ask'])
                     await client.send_message(-1001964100487, str(ask))
                     PID = str((ID['positionId']))
-                    await client.send_message(-1001951476501, PID)                     
+                    await client.send_message(-1001967508097, PID)                     
                 else:
                     msg = (ID['message'])
                     await client.send_message(igroup, msg)
 
                 PID = str((ID['positionId']))
-                await client.send_message(-1001951476501, PID)              
+                await client.send_message(-1001967508097, PID)              
 
             else:
                 ID=await connection.create_market_sell_order(pair, 0.01,float(sl),float(tp1))
@@ -143,16 +143,15 @@ async def my_event_handler(event):
                 ask = float(current_price['ask'])
                 await client.send_message(-1001964100487, str(ask))
                 PID = str((ID['positionId']))
-                await client.send_message(-1001951476501, PID)                 
+                await client.send_message(-1001967508097, PID)                 
         else:
             pass
              
-    elif tstring[1] == 'Let’s close first entry and set BREAKEVEN last layer. Scalpers can close all now ✅':
-        async for message in client.iter_messages(-1001951476501):
+    all now ✅':
+        async for message in client.iter_messages(-1001967508097):
             ID = str(message.text)
-            async for message in client.iter_messages(-1001964100487):
-                sl = float(message.text)
-                await connection.modify_position(ID, sl)
+            cancel = await connection.close_position(ID)
+            await client.send_message(igroup, str(cancel))  
             
 
 
