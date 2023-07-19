@@ -40,8 +40,8 @@ ACCOUNT_ID = "3c0fd7b8-0f1c-4eb9-bad9-84a5cdf3d089"  #Scalping Account
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-#channel_id = -1001981997793  #main
-channel_id = -1001963686318  #trading test
+channel_id = -1001981997793  #main
+#channel_id = -1001963686318  #trading test
 igroup = -990951103
 
 @client.on(events.MessageEdited(chats=channel_id))
