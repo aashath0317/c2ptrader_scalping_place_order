@@ -38,8 +38,8 @@ API_KEY = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmOWI4ZGVlMzljMzVhNDY4
 ACCOUNT_ID = "3e917764-b12f-4834-8e81-5f445222d16b"  #another demo
 
 
-#channel_id = -1001981997793  #main
-channel_id = -1001963686318  #trading test
+channel_id = -1001981997793  #main
+#channel_id = -1001963686318  #trading test
 igroup = -990951103
 
 @client.on(events.NewMessage(chats=channel_id))
