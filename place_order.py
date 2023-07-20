@@ -100,7 +100,7 @@ async def my_event_handler(event):
                     await client.send_message(igroup, msg)
 
 
-            elif not tp == "":
+            elif not tp1 == "":
                 ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
                 if (ID['message']) == "No error returned":
                     await client.send_message(igroup, "Order Placed 🎯")
