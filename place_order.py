@@ -30,7 +30,7 @@ import asyncio
 import logging
 import math
 
-string='1BVtsOGoBuxZWeg7mGl56LOTEv-PtHN4kxgbWkfLTzkyroFHeRONtbre9-s6bVgwvY_-56_pkQbE14DA91j4mKrm84J23LO1r-HAKdCEriuJda9EkXK2suDIYxILrIlytILjVSG1bIUqfFlTehuKVfrzTl8iE9F5wuMxp6Gk4H50DNUI3Z4u_W5-X5KHQJML5U5rqTg-LlEI-6XDbMnTI6gjTJzO92OoItHHqvQJLbuSYq8OHzkl0Tm52grpL8XTNVQvk4UdsojXWKm5zOLaAtjJCmM-dSn8vR1fuWB0AGraA_VoITPkxOMt9HSF4o-MvmBjrrGBNVnPKxF0FdnVP_2nBzM6DQzQ='
+string='1BVtsOMYBu0Z6XDdoFn-NdlgyCgE8BJUbLT8fYWqMnikBqAZPRcKp6Gn5r4zzgAIIVz-lsdjEuIpXWu2aDnM3rQrZol285YLAU7-nDlr04RG29ot51aTUpr4IaT1UlyGM8wppnXmgiUYFU1TegakbZ4pScqR3xpLJNCfs4auUW7hYaLL4o_hulw_YeDDGIKtytrDGzQN0N0NT4k0DFFLNx0FIVXXTuFVroWDST1kPRzMqWSGMmKWqguDw1htu6LDCP9GgUk-bQedaz27izupLx9PfH8ADcJ3B4K6BP_MhP2DjISpkz5dlk755iTECydwwZmeW7Wc-P85Z70z0t2Gs65vK9o5DtMs='
 client = telethon.TelegramClient(StringSession(string),api_id=3030128, api_hash='cfc3885f5d2cbdbc5f10e6a643de2711')
 client.connect()
 API_KEY = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmOWI4ZGVlMzljMzVhNDY4ZmNmOGE1ZDlkYTAzNzFiZCIsInBlcm1pc3Npb25zIjpbXSwiYWNjZXNzUnVsZXMiOlt7ImlkIjoidHJhZGluZy1hY2NvdW50LW1hbmFnZW1lbnQtYXBpIiwibWV0aG9kcyI6WyJ0cmFkaW5nLWFjY291bnQtbWFuYWdlbWVudC1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZXN0LWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1ycGMtYXBpIiwibWV0aG9kcyI6WyJtZXRhYXBpLWFwaTp3czpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciIsIndyaXRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoibWV0YWFwaS1yZWFsLXRpbWUtc3RyZWFtaW5nLWFwaSIsIm1ldGhvZHMiOlsibWV0YWFwaS1hcGk6d3M6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX0seyJpZCI6Im1ldGFzdGF0cy1hcGkiLCJtZXRob2RzIjpbIm1ldGFzdGF0cy1hcGk6cmVzdDpwdWJsaWM6KjoqIl0sInJvbGVzIjpbInJlYWRlciJdLCJyZXNvdXJjZXMiOlsiKjokVVNFUl9JRCQ6KiJdfSx7ImlkIjoicmlzay1tYW5hZ2VtZW50LWFwaSIsIm1ldGhvZHMiOlsicmlzay1tYW5hZ2VtZW50LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJjb3B5ZmFjdG9yeS1hcGkiLCJtZXRob2RzIjpbImNvcHlmYWN0b3J5LWFwaTpyZXN0OnB1YmxpYzoqOioiXSwicm9sZXMiOlsicmVhZGVyIiwid3JpdGVyIl0sInJlc291cmNlcyI6WyIqOiRVU0VSX0lEJDoqIl19LHsiaWQiOiJtdC1tYW5hZ2VyLWFwaSIsIm1ldGhvZHMiOlsibXQtbWFuYWdlci1hcGk6cmVzdDpkZWFsaW5nOio6KiIsIm10LW1hbmFnZXItYXBpOnJlc3Q6cHVibGljOio6KiJdLCJyb2xlcyI6WyJyZWFkZXIiLCJ3cml0ZXIiXSwicmVzb3VyY2VzIjpbIio6JFVTRVJfSUQkOioiXX1dLCJ0b2tlbklkIjoiMjAyMTAyMTMiLCJpbXBlcnNvbmF0ZWQiOmZhbHNlLCJyZWFsVXNlcklkIjoiZjliOGRlZTM5YzM1YTQ2OGZjZjhhNWQ5ZGEwMzcxYmQiLCJpYXQiOjE2ODkzMzk5MjV9.NsgW8ziS-GvcqoSK1UEOiheJpun1PViBtrWAqqzWbrsEHfgsAdtnRkt0SwPnQCzdr4kyQSiN7JIBy8Ug1x4mX_aW4xAT9oX8PGRunwh2DLYjSsc8yuw1cOiCKUeg1suZVmEGUB9F1omkF0057_Mx2tgkzN-9a-rANohy5jplhmlcEyj4FjVs6924Tyf9CTGl-O-YJ8YT66163JlTngXhzYOqlxFKSPiPPnNT18aMWE6hq46_n4LAC-1Owm4Xm_yp_TH3q09ve_SAP01phIYgSy7YI_n3hJOfIR3MWXyghqMTjm7hWovYaq9w47mhkuqlZ5kmhYDSVtIw0ClW0gp02HDH5-HG0tQQuZZ9eVdcmD-IYRiyldV7SDVNQPGP4YLKjwkVB9bThATtOKzVjfwzgSbkLvp0NcmZ0U7rLacSTCXezJdy4gXOK41fA6b67re-nVxwnNuN7cLfjMHUNtWJtroc6nYDJJpIWxOYgiATDgumonbhCtJvOlkww88lHvEUYZwxhjUHGNmbcw116Jg9Litpiqt-MhwylqcrX0UHjfZhMhK-il-yZF-MdRcoU-pUFI_GiMbDUnn6KwkEOgHz0DJEHJpsV7eS89I6ZzN_XyAHG6PpfSBHK1QkXzhAWqWPyiamlgoB7QQF-yCkiRmQehZY8xvHhg8Dq5xuLVpNeS0"
@@ -71,9 +71,8 @@ async def my_event_handler(event):
         tstring = remove_empty_datatypes(list_of_strings)
         pao = tstring[0].split(" ")
         pair = pao[0]
-        order = pao[1]
+        order = float(pao[4].split("-")[0])
         order_check = pao[2].strip(" ").upper()
-        print(order)
     except IndexError:
          await client.send_message(igroup, 'Trading Not Placed \n Check this string  \n '+str(tstring))
          return
@@ -86,7 +85,8 @@ async def my_event_handler(event):
         if order == "BUY" and order_check == "NOW":
             await client.send_message(igroup, "BUY NOW ORDER TRIGGERING")
             if tp1 == "":
-                ID = await connection.create_market_buy_order(pair, 0.01)
+                #ID = await connection.create_market_buy_order(pair, 0.01)
+                ID = await connection.create_limit_buy_order(pair, 0.01, order)
                 if (ID['message']) == "No error returned":
                     await client.send_message(igroup, "Order Placed 🎯 Waiting for TP and SL")
                     current_price = await connection.get_symbol_price(symbol='XAUUSD')
@@ -101,7 +101,8 @@ async def my_event_handler(event):
 
 
             elif not tp1 == "":
-                ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
+                #ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
+                ID = await connection.create_limit_buy_order(pair, 0.01, order,float(sl),float(tp1))
                 if (ID['message']) == "No error returned":
                     await client.send_message(igroup, "Order Placed 🎯")
                     current_price = await connection.get_symbol_price(symbol='XAUUSD')
@@ -115,7 +116,8 @@ async def my_event_handler(event):
 
         elif order == "SELL" and order_check == "NOW":
             if tp1 == "":
-                ID = await connection.create_market_sell_order(pair, 0.01)
+                #ID = await connection.create_market_sell_order(pair, 0.01)
+                ID = await connection.create_limit_sell_order(pair, 0.01, order)
                 if (ID['message']) == "No error returned":
                     await client.send_message(igroup, "Order Placed 🎯 Waiting for TP and SL")
                     current_price = await connection.get_symbol_price(symbol='XAUUSD')
@@ -130,17 +132,15 @@ async def my_event_handler(event):
                 PID = str((ID['positionId']))
                 await client.send_message(-1001967508097, PID)              
 
-            elif not tp1 == "":
-                ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
-                if (ID['message']) == "No error returned":
-                    await client.send_message(igroup, "Order Placed 🎯")
-                    current_price = await connection.get_symbol_price(symbol='XAUUSD')
-                    bid = float(current_price['bid'])
-                    await client.send_message(-1001964100487, str(bid))
-                    PID = str((ID['positionId']))
-                    await client.send_message(-1001967508097, PID)     
             else:
-                await client.send_message(igroup, 'Trading Not Placed \n Check this string  \n '+str(tstring))                
+                #ID=await connection.create_market_sell_order(pair, 0.01,float(sl),float(tp1))
+                ID = await connection.create_limit_buy_order(pair, 0.01, order, float(sl),float(tp1))
+                await client.send_message(igroup, "Order Placed 🎯")   
+                current_price = await connection.get_symbol_price(symbol='XAUUSD')
+                ask = float(current_price['ask'])
+                await client.send_message(-1001964100487, str(ask))
+                PID = str((ID['positionId']))
+                await client.send_message(-1001967508097, PID)                 
         else:
             pass
              
