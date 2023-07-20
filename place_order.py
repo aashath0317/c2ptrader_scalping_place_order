@@ -130,14 +130,17 @@ async def my_event_handler(event):
                 PID = str((ID['positionId']))
                 await client.send_message(-1001967508097, PID)              
 
+            elif not tp1 == "":
+                ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
+                if (ID['message']) == "No error returned":
+                    await client.send_message(igroup, "Order Placed 🎯")
+                    current_price = await connection.get_symbol_price(symbol='XAUUSD')
+                    bid = float(current_price['bid'])
+                    await client.send_message(-1001964100487, str(bid))
+                    PID = str((ID['positionId']))
+                    await client.send_message(-1001967508097, PID)     
             else:
-                ID=await connection.create_market_sell_order(pair, 0.01,float(sl),float(tp1))
-                await client.send_message(igroup, "Order Placed 🎯")   
-                current_price = await connection.get_symbol_price(symbol='XAUUSD')
-                ask = float(current_price['ask'])
-                await client.send_message(-1001964100487, str(ask))
-                PID = str((ID['positionId']))
-                await client.send_message(-1001967508097, PID)                 
+                await client.send_message(igroup, 'Trading Not Placed \n Check this string  \n '+str(tstring))                
         else:
             pass
              
