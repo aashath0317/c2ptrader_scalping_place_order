@@ -37,15 +37,10 @@ API_KEY = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmOWI4ZGVlMzljMzVhNDY4
 #ACCOUNT_ID = "2da5bee2-1da0-4ed4-b03b-13714acc8009" #main demo
 ACCOUNT_ID = "3e917764-b12f-4834-8e81-5f445222d16b"  #another demo
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 #channel_id = -1001981997793  #main
 channel_id = -1001963686318  #trading test
 igroup = -990951103
-
-
-
 
 @client.on(events.NewMessage(chats=channel_id))
 async def my_event_handler(event):
@@ -54,14 +49,10 @@ async def my_event_handler(event):
     initial_state = account.state
     deployed_states = ['DEPLOYING', 'DEPLOYED']
     if initial_state not in deployed_states:
-        logger.info('Deploying account')
         await account.deploy()
-
-    logger.info('Waiting for API server to connect to broker ...')    
     await account.wait_connected()
     connection = account.get_rpc_connection()
     await connection.connect()
-    logger.info('Waiting for SDK to synchronize to terminal state ...')
     await connection.wait_synchronized()
     account_information = await connection.get_account_information()
     current_price = await connection.get_symbol_price(symbol='XAUUSD')
@@ -153,11 +144,7 @@ async def my_event_handler(event):
             cancel = await connection.close_position(ID)
             await client.send_message(igroup, str(cancel))  
             
-
-
-
-
-         
+     
     else:
         pass
 
