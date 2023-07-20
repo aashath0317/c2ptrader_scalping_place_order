@@ -84,6 +84,7 @@ async def my_event_handler(event):
         if pair == "GOLD":
             pair = "XAUUSD"
         if order == "BUY" and order_check == "NOW":
+            await client.send_message(igroup, "BUY NOW ORDER TRIGGERING")
             if tp1 == "":
                 ID = await connection.create_market_buy_order(pair, 0.01)
                 if (ID['message']) == "No error returned":
@@ -99,15 +100,17 @@ async def my_event_handler(event):
                     await client.send_message(igroup, msg)
 
 
-            else:
+            elif not tp == "":
                 ID = await connection.create_market_buy_order(pair, 0.01,float(sl),float(tp1))
-                await client.send_message(igroup, "Order Placed 🎯")
-                current_price = await connection.get_symbol_price(symbol='XAUUSD')
-                bid = float(current_price['bid'])
-                await client.send_message(-1001964100487, str(bid))
-                PID = str((ID['positionId']))
-                await client.send_message(-1001967508097, PID)               
-   
+                if (ID['message']) == "No error returned":
+                    await client.send_message(igroup, "Order Placed 🎯")
+                    current_price = await connection.get_symbol_price(symbol='XAUUSD')
+                    bid = float(current_price['bid'])
+                    await client.send_message(-1001964100487, str(bid))
+                    PID = str((ID['positionId']))
+                    await client.send_message(-1001967508097, PID)               
+            else:
+                await client.send_message(igroup, 'Trading Not Placed \n Check this string  \n '+str(tstring))
                     
 
         elif order == "SELL" and order_check == "NOW":
@@ -138,7 +141,7 @@ async def my_event_handler(event):
         else:
             pass
              
-    all now ✅':
+    elif tstring[1] == 'Let’s close first entry and set BREAKEVEN last layer. Scalpers can close all now ✅':
         async for message in client.iter_messages(-1001967508097):
             ID = str(message.text)
             cancel = await connection.close_position(ID)
