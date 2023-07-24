@@ -91,7 +91,8 @@ async def my_event_handler(event):
             await connection.wait_synchronized()
             account_information = await connection.get_account_information()            
             sl = str(tstring[1].split(":")[1].strip(" "))
-            tp1 = str(tstring[2].split(":")[1].strip(" "))
+            #tp1 = str(tstring[2].split(":")[1].strip(" "))
+            tp1 = float(price)+1.5
             tp2 = str(tstring[3].split(":")[1].strip(" "))
             if pair == "GOLD":
                 pair = "XAUUSD"
@@ -208,7 +209,7 @@ async def my_event_handler(event):
                 pass
                 
         elif tstring[1] == 'Let’s close first entry and set BREAKEVEN last layer. Scalpers can close all now ✅':
-            ACCOUNT_ID = "7c348b78-2c13-4340-9875-e1d241cb0323"
+            ACCOUNT_ID = "2474c021-d9e2-41d0-84a2-07910e34fdf3"
             account = await api.metatrader_account_api.get_account(ACCOUNT_ID)
             initial_state = account.state
             deployed_states = ['DEPLOYING', 'DEPLOYED']
@@ -253,7 +254,7 @@ async def my_event_handler(event):
         except IndexError:
             pass
         if order_check == "NOW":
-            ACCOUNT_ID = "7c348b78-2c13-4340-9875-e1d241cb0323"
+            ACCOUNT_ID = "faad96c8-48b5-4457-a288-75711873eedd"
             account = await api.metatrader_account_api.get_account(ACCOUNT_ID)
             initial_state = account.state
             deployed_states = ['DEPLOYING', 'DEPLOYED']
@@ -370,7 +371,7 @@ async def my_event_handler(event):
                 pass
                 
         elif tstring[1] == 'Scalper can close all if satisfied. Set BE to hold your position.':
-            ACCOUNT_ID = "7c348b78-2c13-4340-9875-e1d241cb0323"
+            ACCOUNT_ID = "faad96c8-48b5-4457-a288-75711873eedd"
             account = await api.metatrader_account_api.get_account(ACCOUNT_ID)
             initial_state = account.state
             deployed_states = ['DEPLOYING', 'DEPLOYED']
