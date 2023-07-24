@@ -37,8 +37,8 @@ API_KEY = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmOWI4ZGVlMzljMzVhNDY4
 #ACCOUNT_ID = "2da5bee2-1da0-4ed4-b03b-13714acc8009" #main demo
   #another demo
 
-channel1 = 1963686318
-channel2 = 1928900037
+channel1 = 1981997793
+channel2 = 1920954832
 
 #channel_id = -1001981997793  #main
 #channel_id = -100channel1  #trading test
