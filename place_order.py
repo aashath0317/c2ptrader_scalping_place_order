@@ -41,14 +41,14 @@ channel1 = 1963686318
 channel2 = 1928900037
 
 #channel_id = -1001981997793  #main
-#channel_id = -1001963686318  #trading test
+#channel_id = -100channel1  #trading test
 igroup = -990951103
 
 @client.on(events.NewMessage)
 async def my_event_handler(event):
     channel_id = event.message.peer_id.channel_id
     api = MetaApi(API_KEY)
-    if channel_id == 1963686318:                                                #trading test
+    if channel_id == channel1:                                                #trading test
         message = str(event.text)
         pair = ""
         string = message
@@ -228,7 +228,7 @@ async def my_event_handler(event):
         else:
             pass
     
-    elif channel_id == 1928900037:                                              #trading test 2
+    elif channel_id == channel2:                                              #trading test 2
         message = str(event.text)
         pair = ""
         string = message
@@ -387,11 +387,11 @@ async def my_event_handler(event):
             except:
                 cancel = await connection.cancel_order(ID)
             await client.send_message(igroup, str(cancel))  
-
+                    
         else:
             pass
         print(tstring)
 
-
+        
 client.start()
 client.run_until_disconnected()
